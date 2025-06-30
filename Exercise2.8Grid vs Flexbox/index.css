@@ -1,0 +1,68 @@
+.flexbox-header {
+    display: flex;
+}
+
+.flexbox-header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+.grid-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    grid-column: 1 / -1;
+    display: flex; /* turn header to flexbox */
+    justify-content: space-evenly;
+}
+
+.header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+.menu {
+    grid-column: 1 / 2;
+}
+
+.content {
+    grid-column: 2 / -1;
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
+
+/* The difference:
+- Flexbox takes content first
+- Grid takes layout first
+
+- Flexbox is one-dimensional (row or column)
+- Grid is two-dimensional (rows and columns)
+
+- Flexbox is great for small components
+- Grid is great for larger layouts
+
+- Flexbox is more flexible for content that changes size
+- Grid is better for complex layouts with precise control
+
+- Flexbox is easier for simple layouts
+- Grid is better for complex layouts with multiple rows and columns
+
+- Flexbox is better for aligning items in a single direction
+- Grid is better for aligning items in both directions
+
+- Flexbox is better for responsive design
+- Grid is better for fixed layouts
+
+- Flexbox is better for items that need to grow or shrink
+- Grid is better for items that need to be positioned precisely
+
+- Flexbox is better for items that need to be aligned in a single direction
+- Grid is better for items that need to be aligned in both directions
+
+- Flexbox is better for items that need to be ordered   
+- Grid is better for items that need to be placed in a specific location
+
+*/

@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    grid-gap: 3px;
+    /* grid-template-columns: 1fr 3fr; */
+    /* to make the column as wide as they need to display the content inside */
+    grid-template-columns: repeat(12, 1fr); /* make it 12 column layout to add flexibility */
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    /* grid-column-start: 1; /*expand the header from the first column line */
+    /* grid-column-end: 3; expand the header until the third column line */ 
+    /* or grid-column: 1 / 3; */
+    /* or grid-column: 1 / span 2; meaning it starts from the first column line 
+    and spans across the second column line */ 
+    /* grid-column: 1 / -1; meaning it starts from the first and ends at the last one */
+    grid-column: 2 / -1; /* to give it some space on the left for Menu to expand */
+}
+
+.menu {
+    grid-row: 1 / 3; /* span across the first two rows */
+}
+
+.content {
+    /* together with above 'grid-template-columns: repeat(12, 1fr);' */
+    grid-column: 2 / -1;
+}
+
+.footer {
+    grid-column: 1 / -1; /* span across all columns */
+}

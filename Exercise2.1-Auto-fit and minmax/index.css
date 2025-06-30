@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-gap: 5px;
+    /* grid-template-columns: repeat(6, 100px); */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* "Create as many columns as can fit on the screen. 
+    Each column must be at least 100px wide. If there's any leftover space in the row, 
+    divide that space up equally among all the columns." */
+    grid-template-rows: repeat(2, 100px);
+}
+
+
+
+/* repeat(auto-fit, minmax(100px, 1fr))
+This one line of code creates a perfectly responsive grid.
+- On a wide screen: You might get 5 or 6 columns, all stretched out to fill the space.
+- On a tablet: You might get 3 or 4 columns.
+- On a phone: You might only get 1 or 2 columns, and they will stack neatly on top of each other.
+ */
